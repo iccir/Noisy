@@ -26,7 +26,7 @@ To access the presets folder, click on the "Show Presets Folder" button in the "
 
 Click the checkbox next to a preset's name to enable it. Only enabled presets will show up in the main Noisy window (or in the menu bar).
 
-Several [example presets](#example-presets) are available.
+Several [example presets](https://github.com/iccir/Noisy/tree/main/Docs/Examples) are available.
 
 
 ### File Format
