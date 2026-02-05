@@ -1,0 +1,10 @@
+{
+    "name": "Brown",
+    "program": [
+        { "type": "generator", "subtype": "brownian" },
+        {
+            "type": "biquads",
+            "biquads": [ { "type": "highpass", "frequency": 20 } ]
+        }
+    ]
+}

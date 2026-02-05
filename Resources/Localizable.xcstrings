@@ -1,0 +1,116 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "AUTO_MUTE_TITLE" : {
+      "comment" : "Settings title: 'Auto Mute'",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto Mute"
+          }
+        }
+      }
+    },
+    "CLICK_TO_RECORD_SHORTCUT" : {
+      "comment" : "Shortcut View title - not active",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Click to record shortcut"
+          }
+        }
+      }
+    },
+    "EXPORT_AUDIO_TITLE" : {
+      "comment" : "Save panel title: 'Export Audio'",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Export Audio"
+          }
+        }
+      }
+    },
+    "GENERAL_TITLE" : {
+      "comment" : "Settings title: 'General'",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        }
+      }
+    },
+    "KEYBOARD_TITLE" : {
+      "comment" : "Settings title: 'Keyboard'",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keyboard"
+          }
+        }
+      }
+    },
+    "PAUSE" : {
+      "comment" : "Menu title: 'Pause'",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pause"
+          }
+        }
+      }
+    },
+    "PLAY" : {
+      "comment" : "Menu title: 'Play'",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play"
+          }
+        }
+      }
+    },
+    "PRESETS_TITLE" : {
+      "comment" : "Settings title: 'Presets'",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Presets"
+          }
+        }
+      }
+    },
+    "SHOW_ERROR" : {
+      "comment" : "Menu title: 'Show error'",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show error…"
+          }
+        }
+      }
+    },
+    "TYPE_SHORTCUT" : {
+      "comment" : "Shortcut View title - active",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type shortcut"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

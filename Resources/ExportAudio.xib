@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ExportAudioController">
+            <connections>
+                <outlet property="view" destination="tIx-da-5nR" id="ASd-Z8-wTc"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <userDefaultsController representsSharedInstance="YES" id="Bui-lf-GNg"/>
+        <customView id="tIx-da-5nR">
+            <rect key="frame" x="0.0" y="0.0" width="298" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHL-3H-KeW">
+                    <rect key="frame" x="18" y="55" width="60" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Duration:" id="WrA-pS-nMT">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eei-dc-Xxp">
+                    <rect key="frame" x="27" y="23" width="51" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Format:" id="XNy-vI-bdh">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vKQ-t9-pZX">
+                    <rect key="frame" x="183" y="55" width="56" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="seconds" id="8RO-8Z-BfL">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFh-Qa-9sb">
+                    <rect key="frame" x="81" y="16" width="100" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" title="44100 Hz" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="44100" imageScaling="proportionallyDown" inset="2" selectedItem="9u5-CB-10A" id="l8y-gs-NWc">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="CNR-Qt-Ba9">
+                            <items>
+                                <menuItem title="44100 Hz" state="on" tag="44100" id="9u5-CB-10A"/>
+                                <menuItem title="48000 Hz" tag="48000" id="7tk-FX-nB1"/>
+                                <menuItem title="96000 Hz" tag="96000" id="obd-UH-c8o"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="-2" name="selectedTag" keyPath="self.sampleRate" id="ztg-Cg-ApK"/>
+                    </connections>
+                </popUpButton>
+                <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yJb-tb-irn">
+                    <rect key="frame" x="84" y="52" width="93" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="NQ3-rd-KHn">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" formatWidth="-1" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="42" id="LQO-VW-Ky4">
+                            <real key="maximum" value="60"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.duration" id="ITX-kh-L4T"/>
+                    </connections>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tzd-zz-q3x">
+                    <rect key="frame" x="182" y="16" width="100" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" title="Mono" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" imageScaling="proportionallyDown" inset="2" selectedItem="coG-tl-RK5" id="PRA-K6-jLA">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="cln-Jo-4S4">
+                            <items>
+                                <menuItem title="Mono" state="on" tag="1" id="coG-tl-RK5"/>
+                                <menuItem title="Stereo" tag="2" id="0S6-mD-sh2"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="-2" name="selectedTag" keyPath="self.channelCount" id="H87-lx-rb7"/>
+                    </connections>
+                </popUpButton>
+            </subviews>
+            <point key="canvasLocation" x="118" y="57.5"/>
+        </customView>
+    </objects>
+</document>

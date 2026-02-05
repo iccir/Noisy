@@ -1,0 +1,8 @@
+{
+    // Generates uniform white noise and then applies a PKE pinking filter
+    "name": "Pinking PKE",
+    "program": [
+        { "type": "generator", "subtype": "uniform" },
+        { "type": "pinking",   "subtype": "pke"     }
+    ]
+}

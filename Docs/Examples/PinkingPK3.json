@@ -1,0 +1,7 @@
+{
+    "name": "Pinking PK3",
+    "program": [
+        { "type": "generator", "subtype": "uniform" },
+        { "type": "pinking",   "subtype": "pk3"     }
+    ]
+}

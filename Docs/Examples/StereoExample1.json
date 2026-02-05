@@ -1,0 +1,19 @@
+/*
+    White noise on the left, pink noise on the right.
+
+    This example generates a single buffer of white noise.
+
+    A copy is made for the right channel and then a pinking
+    filter is applied to the copy.
+*/
+{
+    "name": "Stereo Example 1",
+    "program": [
+        { "type": "generator", "subtype": "gaussian" },
+        {
+            "type": "stereo",
+            "left": [ ],
+            "right": [ { "type": "pinking", "subtype": "pke" } ]
+        }
+    ]
+}

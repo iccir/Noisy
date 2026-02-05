@@ -1,0 +1,54 @@
+/*
+    My personal preset for coding. Generates brown noise and
+    combines with a bit of filtered white noise.
+    
+    My tinnitus is somewhere around 13.5 KHz and the highest
+    frequency I can hear is around 14.5 KHz. Using a gaussian
+    generator with a 14KHz -24dB/octave highpass filter works
+    well to mask it.
+*/
+{
+    "name": "BrownPlus14K",
+    "program": [
+        {
+            "type": "split",
+            "programs": [
+                [
+                    // Start with brownian noise
+                    {
+                        "type": "generator",
+                        "subtype": "brownian"
+                    },
+                    // 80Hz highpass due to tiny desk speakers
+                    {
+                        "type": "biquads",
+                        "biquads": [
+                            { "type": "highpass", "frequency": 60 } 
+                        ]
+                    }
+                ],
+
+                [
+                    // Start with gaussian white noise
+                    {
+                        "type": "generator",
+                        "subtype": "gaussian"
+                    },
+                    // 14KHz highpass at -24dB/octave 
+                    {
+                        "type": "biquads",
+                        "biquads": [
+                            { "type": "highpass", "frequency": 14000 },
+                            { "type": "highpass", "frequency": 14000 }
+                        ]
+                    },
+                    // Adjust gain so we don't overpower the brown noise
+                    {
+                        "type": "gain",
+                        "gain": -20
+                    }
+                ]
+            ]
+        }
+    ]
+}

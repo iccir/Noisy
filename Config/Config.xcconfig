@@ -1,0 +1,5 @@
+BUNDLE_IDENTIFIER_PREFIX = com.ricciadams.opensource
+
+#include? "../Private/Private.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = $(BUNDLE_IDENTIFIER_PREFIX).Noisy

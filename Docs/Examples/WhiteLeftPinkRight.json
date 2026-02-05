@@ -1,0 +1,14 @@
+/*
+    White noise on the left, pink noise on the right
+*/
+{
+    "name": "White Left, Pink Right",
+    "program": [
+        { "type": "generator", "subtype": "gaussian" },
+        {
+            "type": "stereo",
+            "left": [ ],
+            "right": [ { "type": "pinking", "subtype": "pke" } ]
+        }
+    ]
+}

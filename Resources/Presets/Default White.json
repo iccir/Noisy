@@ -1,0 +1,6 @@
+{
+    "name": "White",
+    "program": [
+        { "type": "generator", "subtype": "gaussian" }
+    ]
+}

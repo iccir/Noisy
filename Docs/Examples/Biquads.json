@@ -1,0 +1,37 @@
+/*
+    Another example of white noise on the left, pink noise on the right.
+
+    This example generates two different random buffers -
+    one for the left channel and one for the right.
+*/
+{
+    "name": "Biquads",
+    "program": [
+        { "type": "generator", "subtype": "gaussian" },
+        {
+            "type": "stereo",
+            "left": [
+                {
+                    "type": "biquads",
+                    "biquads": [
+                        { "type": "highpass",  "frequency": 50                        },
+                        { "type": "lowshelf",  "frequency": 100,   "gain": 12         },
+                        { "type": "peaking",   "frequency": 2000,  "gain": 24, "Q": 5 },
+                        { "type": "highshelf", "frequency": 5000,  "gain": 12         },
+                        { "type": "lowpass",   "frequency": 10000,             "Q": 2 }
+                    ]
+                }
+            ],
+            
+            "right": [
+                {
+                    "type": "biquads",
+                    "biquads": [
+                        { "type": "notch",    "frequency": 5000, "Q": 5 },
+                        { "type": "bandpass", "frequency": 5000, "Q": 5 }
+                    ]
+                }
+            ]
+        }
+    ]
+}

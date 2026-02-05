@@ -1,0 +1,16 @@
+/*
+    This is an exact port of Douglas McCausland's Brown Noise Max patch.
+    It represents "true" brown noise generated from a random walk combined
+    with a simple DC block node.
+    
+    Noisy's "Default Brown.json" uses a biquad highpass at 20Hz instead of
+    the DC block. This produces better Auto Gain results compared to 
+    Default Pink and Default White.
+*/
+{
+    "name": "DMBrown",
+    "program": [
+        { "type": "generator", "subtype": "brownian" },
+        { "type": "dcblock" }
+    ]
+}

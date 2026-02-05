@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		550673942F1D51A000D901C7 /* Noisy.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 550673932F1D51A000D901C7 /* Noisy.sdef */; };
+		550673972F1D590100D901C7 /* Scripting.m in Sources */ = {isa = PBXBuildFile; fileRef = 550673962F1D590000D901C7 /* Scripting.m */; };
+		5506739B2F21566300D901C7 /* NoisyNode.c in Sources */ = {isa = PBXBuildFile; fileRef = 550673992F21566300D901C7 /* NoisyNode.c */; settings = {COMPILER_FLAGS = "-ffast-math -O3"; }; };
+		5506739E2F23E79E00D901C7 /* ProgramBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5506739D2F23E79E00D901C7 /* ProgramBuilder.m */; };
+		550673B72F2E70CB00D901C7 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 550673B62F2E70CB00D901C7 /* Localizable.xcstrings */; };
+		550673C42F3131A600D901C7 /* IsSwinsianPlaying.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 550673C12F3131A600D901C7 /* IsSwinsianPlaying.applescript */; };
+		550673C52F3131A600D901C7 /* IsAppleMusicPlaying.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 550673C22F3131A600D901C7 /* IsAppleMusicPlaying.applescript */; };
+		550673C62F3131A600D901C7 /* IsSpotifyPlaying.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 550673C32F3131A600D901C7 /* IsSpotifyPlaying.applescript */; };
+		5507D8972EF5BF1500183E97 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5507D8962EF5BF1500183E97 /* Settings.xib */; };
+		5507D8A32EF5C2C300183E97 /* Shortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507D8A22EF5C2C300183E97 /* Shortcut.m */; };
+		5507D8A62EF5C2CB00183E97 /* ShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507D8A52EF5C2CB00183E97 /* ShortcutView.m */; };
+		5507D8A92EF5C2DB00183E97 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507D8A82EF5C2DB00183E97 /* Settings.m */; };
+		5507D8AC2EF5C47D00183E97 /* ShortcutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507D8AB2EF5C47D00183E97 /* ShortcutManager.m */; };
+		5507D8AF2EF5D0E600183E97 /* SettingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507D8AE2EF5D0E600183E97 /* SettingsWindowController.m */; };
+		5507D8B22EF5DE1800183E97 /* PresetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507D8B12EF5DE1800183E97 /* PresetManager.m */; };
+		5507D8B52EF5DFA800183E97 /* Preset.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507D8B42EF5DFA800183E97 /* Preset.m */; };
+		5507D8BE2EF70D4C00183E97 /* NoisyProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507D8BD2EF70D4C00183E97 /* NoisyProgram.m */; };
+		552D76872C75AF550076CAE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552D76862C75AF550076CAE6 /* Assets.xcassets */; };
+		553D67202F12F30D008AF763 /* Ramper.c in Sources */ = {isa = PBXBuildFile; fileRef = 553D671E2F12F30D008AF763 /* Ramper.c */; };
+		55639C972C77D1530053A9DD /* Biquad.m in Sources */ = {isa = PBXBuildFile; fileRef = 55639C922C77CF1B0053A9DD /* Biquad.m */; };
+		55639C982C77D1550053A9DD /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 55639C942C77CF1B0053A9DD /* Utils.m */; };
+		55639C9B2C792E590053A9DD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55639C9A2C792E590053A9DD /* MainMenu.xib */; };
+		55755C382F01828500CFA946 /* ExportAudio.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55755C372F01828500CFA946 /* ExportAudio.xib */; };
+		55755C3B2F01867C00CFA946 /* ExportAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55755C3A2F01867C00CFA946 /* ExportAudioController.m */; };
+		55755C3F2F043F3600CFA946 /* StereoField.c in Sources */ = {isa = PBXBuildFile; fileRef = 55755C3D2F043F3600CFA946 /* StereoField.c */; settings = {COMPILER_FLAGS = "-ffast-math -O3"; }; };
+		559B99462C81928300887349 /* VolumeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B99452C81928300887349 /* VolumeSlider.m */; };
+		55A0DC7F2F103BE90025562A /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A0DC7E2F103BE90025562A /* BackgroundView.m */; };
+		55A0DC832F1167EF0025562A /* AutoMuteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A0DC822F1167EF0025562A /* AutoMuteManager.m */; };
+		55A84A632F17F94800722244 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 55A84A5A2F17F94800722244 /* Config.xcconfig */; };
+		55B308B62C8C229700FB22D4 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B308B52C8C229700FB22D4 /* MainWindow.xib */; };
+		55B308B92C8C254C00FB22D4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B308B82C8C254C00FB22D4 /* MainWindowController.m */; };
+		55B308DB2C8C2C9900FB22D4 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B308DA2C8C2C9900FB22D4 /* AudioPlayer.m */; };
+		55C9B7CB2F0C20C100F8092F /* PlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C9B7C92F0C20C100F8092F /* PlayButton.m */; };
+		55E0D2EB2C7E6552001A0237 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E0D2E82C7E6552001A0237 /* AppDelegate.m */; };
+		55E0D2EC2C7E6552001A0237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E0D2EA2C7E6552001A0237 /* main.m */; };
+		55E99CB52EFAF70B00636D02 /* Presets in Resources */ = {isa = PBXBuildFile; fileRef = 55E99CB42EFAF70B00636D02 /* Presets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		550673932F1D51A000D901C7 /* Noisy.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Noisy.sdef; path = Resources/Noisy.sdef; sourceTree = "<group>"; };
+		550673952F1D590000D901C7 /* Scripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scripting.h; path = Source/Scripting.h; sourceTree = "<group>"; };
+		550673962F1D590000D901C7 /* Scripting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Scripting.m; path = Source/Scripting.m; sourceTree = "<group>"; };
+		550673992F21566300D901C7 /* NoisyNode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = NoisyNode.c; path = Source/NoisyNode.c; sourceTree = "<group>"; };
+		5506739A2F21566300D901C7 /* NoisyNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoisyNode.h; path = Source/NoisyNode.h; sourceTree = "<group>"; };
+		5506739C2F23E79E00D901C7 /* ProgramBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgramBuilder.h; path = Source/ProgramBuilder.h; sourceTree = "<group>"; };
+		5506739D2F23E79E00D901C7 /* ProgramBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgramBuilder.m; path = Source/ProgramBuilder.m; sourceTree = "<group>"; };
+		550673B62F2E70CB00D901C7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = Resources/Localizable.xcstrings; sourceTree = "<group>"; };
+		550673C12F3131A600D901C7 /* IsSwinsianPlaying.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = IsSwinsianPlaying.applescript; path = Resources/Scripts/IsSwinsianPlaying.applescript; sourceTree = "<group>"; };
+		550673C22F3131A600D901C7 /* IsAppleMusicPlaying.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = IsAppleMusicPlaying.applescript; path = Resources/Scripts/IsAppleMusicPlaying.applescript; sourceTree = "<group>"; };
+		550673C32F3131A600D901C7 /* IsSpotifyPlaying.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = IsSpotifyPlaying.applescript; path = Resources/Scripts/IsSpotifyPlaying.applescript; sourceTree = "<group>"; };
+		5507D8962EF5BF1500183E97 /* Settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Settings.xib; path = Resources/Settings.xib; sourceTree = "<group>"; };
+		5507D8A12EF5C2C300183E97 /* Shortcut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shortcut.h; path = Source/Shortcut.h; sourceTree = "<group>"; };
+		5507D8A22EF5C2C300183E97 /* Shortcut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Shortcut.m; path = Source/Shortcut.m; sourceTree = "<group>"; };
+		5507D8A42EF5C2CB00183E97 /* ShortcutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShortcutView.h; path = Source/ShortcutView.h; sourceTree = "<group>"; };
+		5507D8A52EF5C2CB00183E97 /* ShortcutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShortcutView.m; path = Source/ShortcutView.m; sourceTree = "<group>"; };
+		5507D8A72EF5C2DB00183E97 /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Source/Settings.h; sourceTree = "<group>"; };
+		5507D8A82EF5C2DB00183E97 /* Settings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Source/Settings.m; sourceTree = "<group>"; };
+		5507D8AA2EF5C47D00183E97 /* ShortcutManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShortcutManager.h; path = Source/ShortcutManager.h; sourceTree = "<group>"; };
+		5507D8AB2EF5C47D00183E97 /* ShortcutManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShortcutManager.m; path = Source/ShortcutManager.m; sourceTree = "<group>"; };
+		5507D8AD2EF5D0E600183E97 /* SettingsWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SettingsWindowController.h; path = Source/SettingsWindowController.h; sourceTree = "<group>"; };
+		5507D8AE2EF5D0E600183E97 /* SettingsWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SettingsWindowController.m; path = Source/SettingsWindowController.m; sourceTree = "<group>"; };
+		5507D8B02EF5DE1800183E97 /* PresetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PresetManager.h; path = Source/PresetManager.h; sourceTree = "<group>"; };
+		5507D8B12EF5DE1800183E97 /* PresetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PresetManager.m; path = Source/PresetManager.m; sourceTree = "<group>"; };
+		5507D8B32EF5DFA800183E97 /* Preset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Preset.h; path = Source/Preset.h; sourceTree = "<group>"; };
+		5507D8B42EF5DFA800183E97 /* Preset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Preset.m; path = Source/Preset.m; sourceTree = "<group>"; };
+		5507D8BC2EF70D4C00183E97 /* NoisyProgram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NoisyProgram.h; path = Source/NoisyProgram.h; sourceTree = "<group>"; };
+		5507D8BD2EF70D4C00183E97 /* NoisyProgram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NoisyProgram.m; path = Source/NoisyProgram.m; sourceTree = "<group>"; };
+		552D767D2C75AF530076CAE6 /* Noisy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noisy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		552D76862C75AF550076CAE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		553D671E2F12F30D008AF763 /* Ramper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Ramper.c; path = Source/Ramper.c; sourceTree = "<group>"; };
+		553D671F2F12F30D008AF763 /* Ramper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ramper.h; path = Source/Ramper.h; sourceTree = "<group>"; };
+		55639C912C77CF1B0053A9DD /* Biquad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Biquad.h; path = Source/Biquad.h; sourceTree = "<group>"; };
+		55639C922C77CF1B0053A9DD /* Biquad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Biquad.m; path = Source/Biquad.m; sourceTree = "<group>"; };
+		55639C932C77CF1B0053A9DD /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Source/Utils.h; sourceTree = "<group>"; };
+		55639C942C77CF1B0053A9DD /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = Source/Utils.m; sourceTree = "<group>"; };
+		55639C9A2C792E590053A9DD /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = Resources/MainMenu.xib; sourceTree = "<group>"; };
+		55755C372F01828500CFA946 /* ExportAudio.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExportAudio.xib; path = Resources/ExportAudio.xib; sourceTree = "<group>"; };
+		55755C392F01867C00CFA946 /* ExportAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExportAudioController.h; path = Source/ExportAudioController.h; sourceTree = "<group>"; };
+		55755C3A2F01867C00CFA946 /* ExportAudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExportAudioController.m; path = Source/ExportAudioController.m; sourceTree = "<group>"; };
+		55755C3D2F043F3600CFA946 /* StereoField.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = StereoField.c; path = Source/StereoField.c; sourceTree = "<group>"; };
+		55755C3E2F043F3600CFA946 /* StereoField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StereoField.h; path = Source/StereoField.h; sourceTree = "<group>"; };
+		559B99442C81928300887349 /* VolumeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VolumeSlider.h; path = Source/VolumeSlider.h; sourceTree = "<group>"; };
+		559B99452C81928300887349 /* VolumeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VolumeSlider.m; path = Source/VolumeSlider.m; sourceTree = "<group>"; };
+		559B99472C82E69100887349 /* Noisy.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Noisy.entitlements; path = Resources/Noisy.entitlements; sourceTree = "<group>"; };
+		55A0DC7D2F103BE90025562A /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundView.h; path = Source/BackgroundView.h; sourceTree = "<group>"; };
+		55A0DC7E2F103BE90025562A /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackgroundView.m; path = Source/BackgroundView.m; sourceTree = "<group>"; };
+		55A0DC812F1167EF0025562A /* AutoMuteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AutoMuteManager.h; path = Source/AutoMuteManager.h; sourceTree = "<group>"; };
+		55A0DC822F1167EF0025562A /* AutoMuteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AutoMuteManager.m; path = Source/AutoMuteManager.m; sourceTree = "<group>"; };
+		55A84A522F17F68200722244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		55A84A5A2F17F94800722244 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		55B308B52C8C229700FB22D4 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/MainWindow.xib; sourceTree = "<group>"; };
+		55B308B72C8C254C00FB22D4 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainWindowController.h; path = Source/MainWindowController.h; sourceTree = "<group>"; };
+		55B308B82C8C254C00FB22D4 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainWindowController.m; path = Source/MainWindowController.m; sourceTree = "<group>"; };
+		55B308D92C8C2C9900FB22D4 /* AudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AudioPlayer.h; path = Source/AudioPlayer.h; sourceTree = "<group>"; };
+		55B308DA2C8C2C9900FB22D4 /* AudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AudioPlayer.m; path = Source/AudioPlayer.m; sourceTree = "<group>"; };
+		55C9B7C62F099F1D00F8092F /* Switch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Switch.h; path = Source/Switch.h; sourceTree = "<group>"; };
+		55C9B7C72F099F1D00F8092F /* Switch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Switch.m; path = Source/Switch.m; sourceTree = "<group>"; };
+		55C9B7C92F0C20C100F8092F /* PlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayButton.m; path = Source/PlayButton.m; sourceTree = "<group>"; };
+		55C9B7CA2F0C20C100F8092F /* PlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayButton.h; path = Source/PlayButton.h; sourceTree = "<group>"; };
+		55E0D2E82C7E6552001A0237 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Source/AppDelegate.m; sourceTree = "<group>"; };
+		55E0D2E92C7E6552001A0237 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Source/AppDelegate.h; sourceTree = "<group>"; };
+		55E0D2EA2C7E6552001A0237 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
+		55E99CB42EFAF70B00636D02 /* Presets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Presets; path = Resources/Presets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		552D767A2C75AF530076CAE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		550673982F1E97AE00D901C7 /* Scripting */ = {
+			isa = PBXGroup;
+			children = (
+				550673932F1D51A000D901C7 /* Noisy.sdef */,
+				550673952F1D590000D901C7 /* Scripting.h */,
+				550673962F1D590000D901C7 /* Scripting.m */,
+			);
+			name = Scripting;
+			sourceTree = "<group>";
+		};
+		5506739F2F27EA8000D901C7 /* DSP */ = {
+			isa = PBXGroup;
+			children = (
+				5506739A2F21566300D901C7 /* NoisyNode.h */,
+				550673992F21566300D901C7 /* NoisyNode.c */,
+				553D671F2F12F30D008AF763 /* Ramper.h */,
+				553D671E2F12F30D008AF763 /* Ramper.c */,
+				55755C3E2F043F3600CFA946 /* StereoField.h */,
+				55755C3D2F043F3600CFA946 /* StereoField.c */,
+			);
+			name = DSP;
+			sourceTree = "<group>";
+		};
+		550673BA2F31312900D901C7 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				550673C22F3131A600D901C7 /* IsAppleMusicPlaying.applescript */,
+				550673C32F3131A600D901C7 /* IsSpotifyPlaying.applescript */,
+				550673C12F3131A600D901C7 /* IsSwinsianPlaying.applescript */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		5507D8922EF5B51700183E97 /* Playback */ = {
+			isa = PBXGroup;
+			children = (
+				5507D8BC2EF70D4C00183E97 /* NoisyProgram.h */,
+				5507D8BD2EF70D4C00183E97 /* NoisyProgram.m */,
+				55B308D92C8C2C9900FB22D4 /* AudioPlayer.h */,
+				55B308DA2C8C2C9900FB22D4 /* AudioPlayer.m */,
+			);
+			name = Playback;
+			sourceTree = "<group>";
+		};
+		5507D8B82EF7010500183E97 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				55639C932C77CF1B0053A9DD /* Utils.h */,
+				55639C942C77CF1B0053A9DD /* Utils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		551D12BA2C77BBD300D0A271 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55639C912C77CF1B0053A9DD /* Biquad.h */,
+				55639C922C77CF1B0053A9DD /* Biquad.m */,
+				5507D8B32EF5DFA800183E97 /* Preset.h */,
+				5507D8B42EF5DFA800183E97 /* Preset.m */,
+				5506739C2F23E79E00D901C7 /* ProgramBuilder.h */,
+				5506739D2F23E79E00D901C7 /* ProgramBuilder.m */,
+				5507D8A72EF5C2DB00183E97 /* Settings.h */,
+				5507D8A82EF5C2DB00183E97 /* Settings.m */,
+				5507D8A12EF5C2C300183E97 /* Shortcut.h */,
+				5507D8A22EF5C2C300183E97 /* Shortcut.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		552D76742C75AF530076CAE6 = {
+			isa = PBXGroup;
+			children = (
+				55A84A5F2F17F94800722244 /* Config */,
+				5507D8B82EF7010500183E97 /* Utils */,
+				551D12BA2C77BBD300D0A271 /* Model */,
+				55639CA12C793BBB0053A9DD /* View */,
+				5506739F2F27EA8000D901C7 /* DSP */,
+				5507D8922EF5B51700183E97 /* Playback */,
+				55A0DC802F11677E0025562A /* Managers */,
+				550673982F1E97AE00D901C7 /* Scripting */,
+				55E0D2E72C7E653E001A0237 /* Controller */,
+				55639C992C792E500053A9DD /* Resources */,
+				552D767E2C75AF530076CAE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		552D767E2C75AF530076CAE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				552D767D2C75AF530076CAE6 /* Noisy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55639C992C792E500053A9DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				550673BA2F31312900D901C7 /* Scripts */,
+				55E99CB42EFAF70B00636D02 /* Presets */,
+				552D76862C75AF550076CAE6 /* Assets.xcassets */,
+				55A84A522F17F68200722244 /* Info.plist */,
+				550673B62F2E70CB00D901C7 /* Localizable.xcstrings */,
+				55639C9A2C792E590053A9DD /* MainMenu.xib */,
+				55755C372F01828500CFA946 /* ExportAudio.xib */,
+				55B308B52C8C229700FB22D4 /* MainWindow.xib */,
+				5507D8962EF5BF1500183E97 /* Settings.xib */,
+				559B99472C82E69100887349 /* Noisy.entitlements */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		55639CA12C793BBB0053A9DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55A0DC7D2F103BE90025562A /* BackgroundView.h */,
+				55A0DC7E2F103BE90025562A /* BackgroundView.m */,
+				55C9B7CA2F0C20C100F8092F /* PlayButton.h */,
+				55C9B7C92F0C20C100F8092F /* PlayButton.m */,
+				5507D8A42EF5C2CB00183E97 /* ShortcutView.h */,
+				5507D8A52EF5C2CB00183E97 /* ShortcutView.m */,
+				55C9B7C62F099F1D00F8092F /* Switch.h */,
+				55C9B7C72F099F1D00F8092F /* Switch.m */,
+				559B99442C81928300887349 /* VolumeSlider.h */,
+				559B99452C81928300887349 /* VolumeSlider.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		55A0DC802F11677E0025562A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				55A0DC812F1167EF0025562A /* AutoMuteManager.h */,
+				55A0DC822F1167EF0025562A /* AutoMuteManager.m */,
+				5507D8B02EF5DE1800183E97 /* PresetManager.h */,
+				5507D8B12EF5DE1800183E97 /* PresetManager.m */,
+				5507D8AA2EF5C47D00183E97 /* ShortcutManager.h */,
+				5507D8AB2EF5C47D00183E97 /* ShortcutManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		55A84A5F2F17F94800722244 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				55A84A5A2F17F94800722244 /* Config.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		55E0D2E72C7E653E001A0237 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55E0D2E92C7E6552001A0237 /* AppDelegate.h */,
+				55E0D2E82C7E6552001A0237 /* AppDelegate.m */,
+				55755C392F01867C00CFA946 /* ExportAudioController.h */,
+				55755C3A2F01867C00CFA946 /* ExportAudioController.m */,
+				5507D8AD2EF5D0E600183E97 /* SettingsWindowController.h */,
+				5507D8AE2EF5D0E600183E97 /* SettingsWindowController.m */,
+				55B308B72C8C254C00FB22D4 /* MainWindowController.h */,
+				55B308B82C8C254C00FB22D4 /* MainWindowController.m */,
+				55E0D2EA2C7E6552001A0237 /* main.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		552D767C2C75AF530076CAE6 /* Noisy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 552D76902C75AF550076CAE6 /* Build configuration list for PBXNativeTarget "Noisy" */;
+			buildPhases = (
+				552D76792C75AF530076CAE6 /* Sources */,
+				552D767A2C75AF530076CAE6 /* Frameworks */,
+				552D767B2C75AF530076CAE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Noisy;
+			productName = Noisy;
+			productReference = 552D767D2C75AF530076CAE6 /* Noisy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		552D76752C75AF530076CAE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					552D767C2C75AF530076CAE6 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 552D76782C75AF530076CAE6 /* Build configuration list for PBXProject "Noisy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 552D76742C75AF530076CAE6;
+			productRefGroup = 552D767E2C75AF530076CAE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				552D767C2C75AF530076CAE6 /* Noisy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		552D767B2C75AF530076CAE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55E99CB52EFAF70B00636D02 /* Presets in Resources */,
+				55B308B62C8C229700FB22D4 /* MainWindow.xib in Resources */,
+				55755C382F01828500CFA946 /* ExportAudio.xib in Resources */,
+				552D76872C75AF550076CAE6 /* Assets.xcassets in Resources */,
+				550673942F1D51A000D901C7 /* Noisy.sdef in Resources */,
+				55639C9B2C792E590053A9DD /* MainMenu.xib in Resources */,
+				5507D8972EF5BF1500183E97 /* Settings.xib in Resources */,
+				55A84A632F17F94800722244 /* Config.xcconfig in Resources */,
+				550673B72F2E70CB00D901C7 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		552D76792C75AF530076CAE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55E0D2EC2C7E6552001A0237 /* main.m in Sources */,
+				5506739E2F23E79E00D901C7 /* ProgramBuilder.m in Sources */,
+				55755C3F2F043F3600CFA946 /* StereoField.c in Sources */,
+				553D67202F12F30D008AF763 /* Ramper.c in Sources */,
+				55B308DB2C8C2C9900FB22D4 /* AudioPlayer.m in Sources */,
+				5507D8A62EF5C2CB00183E97 /* ShortcutView.m in Sources */,
+				550673972F1D590100D901C7 /* Scripting.m in Sources */,
+				5507D8A92EF5C2DB00183E97 /* Settings.m in Sources */,
+				55E0D2EB2C7E6552001A0237 /* AppDelegate.m in Sources */,
+				550673C52F3131A600D901C7 /* IsAppleMusicPlaying.applescript in Sources */,
+				5507D8A32EF5C2C300183E97 /* Shortcut.m in Sources */,
+				5507D8BE2EF70D4C00183E97 /* NoisyProgram.m in Sources */,
+				550673C42F3131A600D901C7 /* IsSwinsianPlaying.applescript in Sources */,
+				5506739B2F21566300D901C7 /* NoisyNode.c in Sources */,
+				550673C62F3131A600D901C7 /* IsSpotifyPlaying.applescript in Sources */,
+				55B308B92C8C254C00FB22D4 /* MainWindowController.m in Sources */,
+				55639C982C77D1550053A9DD /* Utils.m in Sources */,
+				55A0DC7F2F103BE90025562A /* BackgroundView.m in Sources */,
+				5507D8B52EF5DFA800183E97 /* Preset.m in Sources */,
+				55755C3B2F01867C00CFA946 /* ExportAudioController.m in Sources */,
+				55639C972C77D1530053A9DD /* Biquad.m in Sources */,
+				5507D8B22EF5DE1800183E97 /* PresetManager.m in Sources */,
+				55A0DC832F1167EF0025562A /* AutoMuteManager.m in Sources */,
+				559B99462C81928300887349 /* VolumeSlider.m in Sources */,
+				5507D8AF2EF5D0E600183E97 /* SettingsWindowController.m in Sources */,
+				5507D8AC2EF5C47D00183E97 /* ShortcutManager.m in Sources */,
+				55C9B7CB2F0C20C100F8092F /* PlayButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		552D768E2C75AF550076CAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		552D768F2C75AF550076CAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		552D76912C75AF550076CAE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55A84A5A2F17F94800722244 /* Config.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Resources/Noisy.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Ricci Adams";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		552D76922C75AF550076CAE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55A84A5A2F17F94800722244 /* Config.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Resources/Noisy.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Ricci Adams";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		552D76782C75AF530076CAE6 /* Build configuration list for PBXProject "Noisy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D768E2C75AF550076CAE6 /* Debug */,
+				552D768F2C75AF550076CAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		552D76902C75AF550076CAE6 /* Build configuration list for PBXNativeTarget "Noisy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D76912C75AF550076CAE6 /* Debug */,
+				552D76922C75AF550076CAE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 552D76752C75AF530076CAE6 /* Project object */;
+}

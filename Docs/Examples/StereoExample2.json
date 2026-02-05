@@ -1,0 +1,21 @@
+/*
+    Another example of white noise on the left, pink noise on the right.
+
+    This example generates two different random buffers -
+    one for the left channel and one for the right.
+*/
+{
+    "name": "Stereo Example 2",
+    "program": [
+        {
+            "type": "stereo",
+            "left": [
+                { "type": "generator", "subtype": "gaussian" },
+            ],
+            "right": [
+                { "type": "generator", "subtype": "uniform" },
+                { "type": "pinking", "subtype": "pke" }
+            ]
+        }
+    ]
+}

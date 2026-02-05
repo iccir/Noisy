@@ -1,0 +1,8 @@
+{
+    // Generates uniform white noise and then applies a RBJ pinking filter
+    "name": "Pinking RBJ",
+    "program": [
+        { "type": "generator", "subtype": "uniform" },
+        { "type": "pinking",   "subtype": "rbj"     }
+    ]
+}
