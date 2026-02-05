@@ -1,8 +1,5 @@
 /*
-    Another example of white noise on the left, pink noise on the right.
-
-    This example generates two different random buffers -
-    one for the left channel and one for the right.
+    White noise filtered with every available biquad type.
 */
 {
     "name": "Biquads",
