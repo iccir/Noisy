@@ -27,8 +27,8 @@ In 2025, unable to find a lightweight and efficient noise generator, I decided t
 
 - Noisy's icon is based on [The Great Wave off Kanagawa](https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa) by Katsushika Hokusai.
 - Noisy uses [xoshiro256**](https://prng.di.unimi.it) by Sebastiano Vigna and David Blackman for random number generation.
-- Pink Noise is generated using Paul Kellet "pk3" filter as posted to the Music-DSP mailing list on 1999-10-17.
-- Brown Noise is generated using a [random walk algorithm](https://en.wikipedia.org/wiki/Random_walk). Thanks to [Douglas McCausland](https://www.douglas-mccausland.net) for sharing his Max patch (based on code from Luigi Castelli).
+- Pink noise is generated using filter banks from Paul Kellet and Robert Bristow-Johnson.
+- Brown noise is generated using a [random walk algorithm](https://en.wikipedia.org/wiki/Random_walk). Thanks to [Douglas McCausland](https://www.douglas-mccausland.net) for sharing his Max patch (based on code from Luigi Castelli).
 
 
 ## License
