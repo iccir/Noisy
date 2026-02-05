@@ -2,20 +2,16 @@
 
 [Noisy](https://www.ricciadams.com/projects/noisy) is a macOS noise generator with a simple interface yet powerful feature set.
 
-See [Noisy Advanced Usage]() to learn about custom noise presets or hidden defaults.
+See [Noisy Advanced Usage](https://github.com/iccir/Noisy/blob/main/Docs/AdvancedUsage.md) to learn about custom noise presets or hidden defaults.
 
 
 ## Philosophy
 
-Audio programming is hard. macOS audio programming is harder
-(usually due to sparse documentation). This repository is publicly-viewable
-in the hopes that its source code can help others.
+Audio programming is hard. macOS audio programming is harder (usually due to sparse documentation). This repository is publicly-viewable in the hopes that its source code can help others.
 
 This repository is closed to outside contributions. **Please do not submit pull requests**.
 
-If you are struggling with an audio or DSP concept, you can
-contact me via my [contact form](https://www.ricciadams.com) and
-I can try to point you in the right direction.
+If you are struggling with an audio or DSP concept, you can contact me via my [contact form](https://www.ricciadams.com) and I can try to point you in the right direction.
 
 
 ## History
@@ -25,6 +21,7 @@ Around 2001, a company called Blackhole Media released Noise for Mac OS X. It wa
 I decided to fix this in 2008 by creating Noisy. As I worked for Apple at the time, I released it anonymously. I maintained it until 2010 when a hard drive failure destroyed my login credentials to the anonymous account.
 
 In 2025, unable to find a lightweight and efficient noise generator, I decided to recreate Noisy.
+
 
 ## Acknowledgements
 
