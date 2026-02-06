@@ -15,6 +15,7 @@
 		550673C42F3131A600D901C7 /* IsSwinsianPlaying.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 550673C12F3131A600D901C7 /* IsSwinsianPlaying.applescript */; };
 		550673C52F3131A600D901C7 /* IsAppleMusicPlaying.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 550673C22F3131A600D901C7 /* IsAppleMusicPlaying.applescript */; };
 		550673C62F3131A600D901C7 /* IsSpotifyPlaying.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 550673C32F3131A600D901C7 /* IsSpotifyPlaying.applescript */; };
+		550673C92F3659DC00D901C7 /* SegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 550673C72F3659DC00D901C7 /* SegmentedControl.m */; };
 		5507D8972EF5BF1500183E97 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5507D8962EF5BF1500183E97 /* Settings.xib */; };
 		5507D8A32EF5C2C300183E97 /* Shortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507D8A22EF5C2C300183E97 /* Shortcut.m */; };
 		5507D8A62EF5C2CB00183E97 /* ShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5507D8A52EF5C2CB00183E97 /* ShortcutView.m */; };
@@ -57,6 +58,8 @@
 		550673C12F3131A600D901C7 /* IsSwinsianPlaying.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = IsSwinsianPlaying.applescript; path = Resources/Scripts/IsSwinsianPlaying.applescript; sourceTree = "<group>"; };
 		550673C22F3131A600D901C7 /* IsAppleMusicPlaying.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = IsAppleMusicPlaying.applescript; path = Resources/Scripts/IsAppleMusicPlaying.applescript; sourceTree = "<group>"; };
 		550673C32F3131A600D901C7 /* IsSpotifyPlaying.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = IsSpotifyPlaying.applescript; path = Resources/Scripts/IsSpotifyPlaying.applescript; sourceTree = "<group>"; };
+		550673C72F3659DC00D901C7 /* SegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SegmentedControl.m; path = Source/SegmentedControl.m; sourceTree = "<group>"; };
+		550673C82F3659DC00D901C7 /* SegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SegmentedControl.h; path = Source/SegmentedControl.h; sourceTree = "<group>"; };
 		5507D8962EF5BF1500183E97 /* Settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Settings.xib; path = Resources/Settings.xib; sourceTree = "<group>"; };
 		5507D8A12EF5C2C300183E97 /* Shortcut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shortcut.h; path = Source/Shortcut.h; sourceTree = "<group>"; };
 		5507D8A22EF5C2C300183E97 /* Shortcut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Shortcut.m; path = Source/Shortcut.m; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 				55A0DC7E2F103BE90025562A /* BackgroundView.m */,
 				55C9B7CA2F0C20C100F8092F /* PlayButton.h */,
 				55C9B7C92F0C20C100F8092F /* PlayButton.m */,
+				550673C82F3659DC00D901C7 /* SegmentedControl.h */,
+				550673C72F3659DC00D901C7 /* SegmentedControl.m */,
 				5507D8A42EF5C2CB00183E97 /* ShortcutView.h */,
 				5507D8A52EF5C2CB00183E97 /* ShortcutView.m */,
 				55C9B7C62F099F1D00F8092F /* Switch.h */,
@@ -387,6 +392,7 @@
 				55755C3B2F01867C00CFA946 /* ExportAudioController.m in Sources */,
 				55639C972C77D1530053A9DD /* Biquad.m in Sources */,
 				5507D8B22EF5DE1800183E97 /* PresetManager.m in Sources */,
+				550673C92F3659DC00D901C7 /* SegmentedControl.m in Sources */,
 				55A0DC832F1167EF0025562A /* AutoMuteManager.m in Sources */,
 				559B99462C81928300887349 /* VolumeSlider.m in Sources */,
 				5507D8AF2EF5D0E600183E97 /* SettingsWindowController.m in Sources */,

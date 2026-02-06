@@ -49,7 +49,7 @@
                         </connections>
                     </button>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="19l-hL-nwY" customClass="VolumeSlider">
-                        <rect key="frame" x="10" y="19" width="279" height="28"/>
+                        <rect key="frame" x="10" y="19" width="280" height="28"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <sliderCell key="cell" controlSize="large" continuous="YES" state="on" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="Dyr-SG-Fzi" customClass="VolumeSliderCell"/>
                         <connections>
@@ -94,7 +94,7 @@
             </connections>
             <point key="canvasLocation" x="88" y="87"/>
         </popUpButton>
-        <segmentedControl verticalHuggingPriority="750" id="qNf-Uv-wXo">
+        <segmentedControl verticalHuggingPriority="750" id="qNf-Uv-wXo" customClass="SegmentedControl">
             <rect key="frame" x="0.0" y="0.0" width="171" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
             <segmentedCell key="cell" controlSize="large" borderStyle="border" alignment="left" segmentDistribution="fillEqually" style="rounded" trackingMode="selectOne" id="AVp-n6-RNO">

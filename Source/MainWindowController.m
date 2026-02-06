@@ -168,7 +168,7 @@
         segmentIndex++;
     }
     
-    [_segmentedControl setSegmentDistribution:NSSegmentDistributionFill];
+    [_segmentedControl setSegmentDistribution:NSSegmentDistributionFillEqually];
     [_segmentedControl sizeToFit];
     _segmentedControlDesiredWidth = [_segmentedControl frame].size.width;
     [_segmentedControl setFrame:[_containerView bounds]];
