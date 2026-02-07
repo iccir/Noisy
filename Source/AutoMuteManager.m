@@ -102,7 +102,7 @@ typedef NS_ENUM(NSInteger, PlayerState) {
             [entries addObject:[self _entryWithBundleIdentifier:bundleIdentifier]];
         }
 
-        _entries = entries;
+        _entries = [self _sortedEntriesWithEntries:entries];
 
         [self _handleSettingsDidChange:nil];
         [self _setNeedsUpdate];
@@ -286,6 +286,20 @@ typedef NS_ENUM(NSInteger, PlayerState) {
 }
 
 
+- (NSArray *) _sortedEntriesWithEntries:(NSArray<AutoMuteManagerEntry *> *)entries
+{
+    return [entries sortedArrayUsingComparator:^(id obj1, id obj2) {
+        AutoMuteManagerEntry *entry1 = (AutoMuteManagerEntry *)obj1;
+        AutoMuteManagerEntry *entry2 = (AutoMuteManagerEntry *)obj2;
+        
+        NSString *name1 = [[entry1 name] lowercaseString];
+        NSString *name2 = [[entry2 name] lowercaseString];
+
+        return [name1 compare:name2];
+    }];
+}
+
+
 - (void) _setNeedsUpdate
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(_update) object:nil];
@@ -455,7 +469,7 @@ typedef NS_ENUM(NSInteger, PlayerState) {
 - (void) setEntries:(NSArray<AutoMuteManagerEntry *> *)entries
 {
     if (_entries != entries) {
-        _entries = entries;
+        _entries = [self _sortedEntriesWithEntries:entries];
         
         NSMutableArray *bundleIdentifiers = [NSMutableArray array];
         for (AutoMuteManagerEntry *entry in _entries) {
