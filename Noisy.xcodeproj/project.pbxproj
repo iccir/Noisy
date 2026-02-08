@@ -60,6 +60,7 @@
 		550673C32F3131A600D901C7 /* IsSpotifyPlaying.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = IsSpotifyPlaying.applescript; path = Resources/Scripts/IsSpotifyPlaying.applescript; sourceTree = "<group>"; };
 		550673C72F3659DC00D901C7 /* SegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SegmentedControl.m; path = Source/SegmentedControl.m; sourceTree = "<group>"; };
 		550673C82F3659DC00D901C7 /* SegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SegmentedControl.h; path = Source/SegmentedControl.h; sourceTree = "<group>"; };
+		550673CB2F392B1100D901C7 /* Archive.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Archive.sh; sourceTree = "<group>"; };
 		5507D8962EF5BF1500183E97 /* Settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Settings.xib; path = Resources/Settings.xib; sourceTree = "<group>"; };
 		5507D8A12EF5C2C300183E97 /* Shortcut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shortcut.h; path = Source/Shortcut.h; sourceTree = "<group>"; };
 		5507D8A22EF5C2C300183E97 /* Shortcut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Shortcut.m; path = Source/Shortcut.m; sourceTree = "<group>"; };
@@ -159,6 +160,14 @@
 			name = Scripts;
 			sourceTree = "<group>";
 		};
+		550673CC2F392B1100D901C7 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				550673CB2F392B1100D901C7 /* Archive.sh */,
+			);
+			path = Build;
+			sourceTree = "<group>";
+		};
 		5507D8922EF5B51700183E97 /* Playback */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +208,7 @@
 		552D76742C75AF530076CAE6 = {
 			isa = PBXGroup;
 			children = (
+				550673CC2F392B1100D901C7 /* Build */,
 				55A84A5F2F17F94800722244 /* Config */,
 				5507D8B82EF7010500183E97 /* Utils */,
 				551D12BA2C77BBD300D0A271 /* Model */,
@@ -301,6 +311,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 552D76902C75AF550076CAE6 /* Build configuration list for PBXNativeTarget "Noisy" */;
 			buildPhases = (
+				550673CA2F392AD600D901C7 /* rcbump */,
 				552D76792C75AF530076CAE6 /* Sources */,
 				552D767A2C75AF530076CAE6 /* Frameworks */,
 				552D767B2C75AF530076CAE6 /* Resources */,
@@ -364,6 +375,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		550673CA2F392AD600D901C7 /* rcbump */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = rcbump;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "which rcbump\n\nif [ $? -eq 0 ]; then\n    rcbump build\n    exit $?\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		552D76792C75AF530076CAE6 /* Sources */ = {
