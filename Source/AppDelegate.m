@@ -22,8 +22,12 @@
 
 @property (nonatomic, strong) IBOutlet NSMenuItem *mainMenuPresetsGroupStart;
 @property (nonatomic, strong) IBOutlet NSMenuItem *statusItemMenuPresetGroupStart;
+@property (nonatomic, strong) IBOutlet NSMenuItem *mainMenuAutoMuteStateMenuItem;
 
-@property (nonatomic, strong) IBOutlet NSMenuItem *debugMenu;
+@property (nonatomic, strong) IBOutlet NSMenuItem *autoMuteStateMenuItem;
+@property (nonatomic, strong) IBOutlet NSMenuItem *showControlsMenuItem;
+@property (nonatomic, strong) IBOutlet NSMenuItem *quitSeparatorMenuItem;
+@property (nonatomic, strong) IBOutlet NSMenuItem *quitMenuItem;
 
 @end
 
@@ -289,12 +293,29 @@
 {
     BOOL shouldMute = [[AutoMuteManager sharedInstance] shouldMute];
 
+    [_mainMenuAutoMuteStateMenuItem setHidden:!shouldMute];
+    [_autoMuteStateMenuItem         setHidden:!shouldMute];
+
     [[AudioPlayer sharedInstance] setMuted:shouldMute];
+}
+
+
+- (void) menuNeedsUpdate:(NSMenu *)menu
+{
+    IconMode iconMode = [[Settings sharedInstance] iconMode];
+    
+    BOOL iconModeInMenuBar = (iconMode == IconModeInMenuBar);
+    
+    [_showControlsMenuItem  setHidden:!iconModeInMenuBar];
+    [_quitSeparatorMenuItem setHidden:!iconModeInMenuBar];
+    [_quitMenuItem          setHidden:!iconModeInMenuBar];
 }
 
 
 - (BOOL) validateMenuItem:(NSMenuItem *)menuItem
 {
+    BOOL isStatusBarMenu = [[menuItem menu] isEqual:_statusBarMenu];
+
     if ([menuItem action] == @selector(togglePlayback:)) {
         AudioPlayer *player = [AudioPlayer sharedInstance];
         
@@ -306,16 +327,13 @@
             [menuItem setTitle:NSLocalizedString(@"PLAY", @"Menu title: 'Play'")];
         }
     
-    } else if (
-        [menuItem action] == @selector(changeSelectedPreset:) &&
-        [[menuItem menu] isEqual:_statusBarMenu]
-    ) {
+    } else if ([menuItem action] == @selector(changeSelectedPreset:) && isStatusBarMenu) {
         Preset *preset = [menuItem representedObject];
         
         BOOL isSelected = [[PresetManager sharedInstance] isPresetSelected:preset];
         [menuItem setState:(isSelected ? NSControlStateValueOn : NSControlStateValueOff)];
 
-    } else if ([menuItem action] == @selector(showMainWindow:)) {
+    } else if ([menuItem action] == @selector(showMainWindow:) && !isStatusBarMenu) {
         BOOL yn = [_mainWindowController isWindowLoaded] && [[_mainWindowController window] isMainWindow];
         [menuItem setState:(yn ? NSControlStateValueOn : NSControlStateValueOff)];
     }
@@ -395,6 +413,7 @@
 - (IBAction) showMainWindow:(id)sender
 {
     [[self mainWindowController] showWindow:self];
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 

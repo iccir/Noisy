@@ -141,6 +141,18 @@ CA
                                     <action selector="togglePlayback:" target="494" id="puP-1d-xxc"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Auto Mute is active" id="Wuj-Z0-hs1">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Auto Mute is active">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="1pn-Zu-H9B"/>
                             <menuItem title="Increase Volume" keyEquivalent="" id="XWR-UE-did">
                                 <connections>
@@ -221,20 +233,53 @@ CA
                         <action selector="togglePlayback:" target="494" id="kp9-nP-KgK"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Auto Mute is active" id="8cW-Oe-7XG">
+                    <attributedString key="attributedTitle">
+                        <fragment content="Auto Mute is active">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" metaFont="smallSystem"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="4F5-zD-I0Q"/>
                 <menuItem isSeparatorItem="YES" id="gP3-GD-iRR"/>
+                <menuItem title="Controls…" id="Nmc-SE-UJp">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showMainWindow:" target="494" id="tkW-Ra-vHM"/>
+                    </connections>
+                </menuItem>
                 <menuItem title="Settings…" id="00w-3E-0gg">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="showSettings:" target="494" id="zOX-iK-hPW"/>
                     </connections>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="gfQ-Oj-VJK"/>
+                <menuItem title="Quit Noisy" id="Vkj-9w-Mlz">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="terminate:" target="-2" id="OPH-tH-8Or"/>
+                    </connections>
+                </menuItem>
             </items>
+            <connections>
+                <outlet property="delegate" destination="494" id="M5R-LW-AhY"/>
+            </connections>
             <point key="canvasLocation" x="440" y="204"/>
         </menu>
         <customObject id="494" customClass="AppDelegate">
             <connections>
+                <outlet property="autoMuteStateMenuItem" destination="8cW-Oe-7XG" id="vMx-sa-6f8"/>
+                <outlet property="mainMenuAutoMuteStateMenuItem" destination="Wuj-Z0-hs1" id="r84-Z5-XMp"/>
                 <outlet property="mainMenuPresetsGroupStart" destination="IPD-DX-e7k" id="xDG-Bi-idq"/>
+                <outlet property="quitMenuItem" destination="Vkj-9w-Mlz" id="bTi-5y-ToG"/>
+                <outlet property="quitSeparatorMenuItem" destination="gfQ-Oj-VJK" id="vIi-yR-kDS"/>
+                <outlet property="showControlsMenuItem" destination="Nmc-SE-UJp" id="fbE-hy-kbn"/>
                 <outlet property="statusBarMenu" destination="nxw-GP-t11" id="7dL-FO-Wf6"/>
                 <outlet property="statusItemMenuPresetGroupStart" destination="4F5-zD-I0Q" id="QWs-0E-Fbp"/>
             </connections>
