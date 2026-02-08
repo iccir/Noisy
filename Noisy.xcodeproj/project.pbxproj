@@ -560,6 +560,7 @@
 				CODE_SIGN_ENTITLEMENTS = Resources/Noisy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Ricci Adams";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -583,6 +584,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Resources/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2024 Ricci Adams";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
