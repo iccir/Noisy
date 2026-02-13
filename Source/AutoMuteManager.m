@@ -14,7 +14,7 @@ NSString * const AutoMuteDidChangeNotificationName = @"AutoMuteDidChangeNotifica
 
 // MediaRemote SPI
 static void (*MRMediaRemoteRegisterForNowPlayingNotifications)(dispatch_queue_t queue);
-static void (*MRMediaRemoteGetNowPlayingApplicationIsPlaying)(dispatch_queue_t queue, void (^callback)(BOOL playing));
+static void (*MRMediaRemoteGetAnyApplicationIsPlaying)(dispatch_queue_t queue, void (^callback)(BOOL playing));
 
 
 static NSString *sAppleMusicBundleIdentifier = @"com.apple.Music";
@@ -27,6 +27,7 @@ static NSString *sSwinsianTrackPausedNotificationName  = @"com.swinsian.Swinsian
 
 static NSString *sSpotifyBundleIdentifier = @"com.spotify.client";
 static NSString *sSpotifyPlaybackStateChangedNotificationName = @"com.spotify.client.PlaybackStateChanged";
+
 
 static id sSharedInstance = nil;
 
@@ -200,11 +201,11 @@ typedef NS_ENUM(NSInteger, PlayerState) {
 
 - (void) _handleNowPlayingNotification:(NSNotification *)note
 {
-    if (!MRMediaRemoteGetNowPlayingApplicationIsPlaying) return;
+    if (!MRMediaRemoteGetAnyApplicationIsPlaying) return;
         
     __weak id weakSelf = self;
     
-    MRMediaRemoteGetNowPlayingApplicationIsPlaying(dispatch_get_main_queue(), ^(BOOL yn) {
+    MRMediaRemoteGetAnyApplicationIsPlaying(dispatch_get_main_queue(), ^(BOOL yn) {
         [weakSelf _updateNowPlayingIsActive:yn];
     });
 }
@@ -263,12 +264,15 @@ typedef NS_ENUM(NSInteger, PlayerState) {
     MRMediaRemoteRegisterForNowPlayingNotifications = dlsym(mediaRemote, "MRMediaRemoteRegisterForNowPlayingNotifications");
     if (!MRMediaRemoteRegisterForNowPlayingNotifications) return;
 
-    MRMediaRemoteGetNowPlayingApplicationIsPlaying  = dlsym(mediaRemote, "MRMediaRemoteGetNowPlayingApplicationIsPlaying");
-    if (!MRMediaRemoteGetNowPlayingApplicationIsPlaying) return;
+    MRMediaRemoteGetAnyApplicationIsPlaying  = dlsym(mediaRemote, "MRMediaRemoteGetAnyApplicationIsPlaying");
+    if (!MRMediaRemoteGetAnyApplicationIsPlaying) return;
+
+    void *hasMRMediaRemotePlayerIsPlayingDidChangeNotification = dlsym(mediaRemote, "kMRMediaRemotePlayerIsPlayingDidChangeNotification");
+    if (!hasMRMediaRemotePlayerIsPlayingDidChangeNotification) return;
 
 	MRMediaRemoteRegisterForNowPlayingNotifications(dispatch_get_main_queue());
 
-    NSString *notificationName = @"kMRMediaRemoteNowPlayingApplicationIsPlayingDidChangeNotification";
+    NSString *notificationName = @"kMRMediaRemotePlayerIsPlayingDidChangeNotification";
 
     [[NSNotificationCenter defaultCenter] addObserver: self
                                              selector: @selector(_handleNowPlayingNotification:)
