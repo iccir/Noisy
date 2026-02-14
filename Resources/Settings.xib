@@ -48,7 +48,7 @@
                             <action selector="selectPane:" target="-2" id="Muy-D5-rH4"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="33D161F8-8775-41DA-9EF0-B569E1EA1866" label="Auto Mute" paletteLabel="Auto Mute" tag="2" image="speaker.slash.fill" catalog="system" sizingBehavior="auto" selectable="YES" id="TGp-Qf-nyq">
+                    <toolbarItem implicitItemIdentifier="33D161F8-8775-41DA-9EF0-B569E1EA1866" label="Auto Mute" paletteLabel="Auto Mute" tag="2" image="SettingsAutoMuteIcon" sizingBehavior="auto" selectable="YES" id="TGp-Qf-nyq">
                         <connections>
                             <action selector="selectPane:" target="-2" id="WNs-Rw-IBn"/>
                         </connections>
@@ -295,7 +295,7 @@
                     <rect key="frame" x="20" y="109" width="328" height="120"/>
                     <clipView key="contentView" drawsBackground="NO" id="8Hb-SG-jSR">
                         <rect key="frame" x="1" y="1" width="326" height="118"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" id="vrZ-Ap-QYX">
                                 <rect key="frame" x="0.0" y="0.0" width="326" height="118"/>
@@ -317,11 +317,11 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView id="IeO-Yw-HaQ">
-                                                <rect key="frame" x="8" y="0.0" width="519" height="24"/>
+                                                <rect key="frame" x="18" y="0.0" width="309" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ac-3R-sil">
-                                                        <rect key="frame" x="22" y="4" width="496" height="16"/>
+                                                        <rect key="frame" x="22" y="4" width="286" height="16"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="8Rt-oa-0Tm">
                                                             <font key="font" usesAppearanceFont="YES"/>
@@ -433,7 +433,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <clipView key="contentView" drawsBackground="NO" id="TAa-oM-EPD">
                         <rect key="frame" x="1" y="1" width="326" height="142"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" id="ZBV-7f-0KF">
                                 <rect key="frame" x="0.0" y="0.0" width="326" height="142"/>
@@ -454,7 +454,7 @@
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
                                             <tableCellView id="etB-ec-FwL">
-                                                <rect key="frame" x="8" y="0.0" width="309" height="24"/>
+                                                <rect key="frame" x="18" y="0.0" width="309" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" id="f9f-2N-wA5">
@@ -524,9 +524,9 @@
         </menuItem>
     </objects>
     <resources>
+        <image name="SettingsAutoMuteIcon" width="22" height="22"/>
         <image name="doc.badge.gearshape" catalog="system" width="16" height="18"/>
         <image name="gearshape" catalog="system" width="16" height="16"/>
         <image name="keyboard" catalog="system" width="19" height="13"/>
-        <image name="speaker.slash.fill" catalog="system" width="14" height="16"/>
     </resources>
 </document>

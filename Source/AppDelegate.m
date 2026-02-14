@@ -167,14 +167,14 @@
         if (!_statusItem) {
             _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
 
-            NSImage *image = [NSImage imageNamed:@"StatusBarIcon"];
 
             [_statusItem setMenu:_statusBarMenu];
             [_statusBarMenu setDelegate:self];
 
-            [[_statusItem button] setImage:image];
             [_statusItem setMenu:[self statusBarMenu]];
         }
+        
+        [self _updateStatusBarIcon];
 
     } else {
         if (_statusItem) {
@@ -188,6 +188,16 @@
     } else {
         [NSApp setActivationPolicy:NSApplicationActivationPolicyRegular];
     }
+}
+
+
+- (void) _updateStatusBarIcon
+{
+    NSImage *image = [[AutoMuteManager sharedInstance] shouldMute] ?
+        [NSImage imageNamed:@"StatusBarIconAutoMute"] :
+        [NSImage imageNamed:@"StatusBarIcon"];
+        
+    [[_statusItem button] setImage:image];
 }
 
 
@@ -295,6 +305,8 @@
 
     [_mainMenuAutoMuteStateMenuItem setHidden:!shouldMute];
     [_autoMuteStateMenuItem         setHidden:!shouldMute];
+
+    [self _updateStatusBarIcon];
 
     [[AudioPlayer sharedInstance] setMuted:shouldMute];
 }

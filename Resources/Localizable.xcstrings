@@ -1,6 +1,17 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "AUTO_MUTE_IS_ACTIVE" : {
+      "comment" : "Text when Auto Mute is active",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto Mute is active"
+          }
+        }
+      }
+    },
     "AUTO_MUTE_TITLE" : {
       "comment" : "Settings title: 'Auto Mute'",
       "localizations" : {

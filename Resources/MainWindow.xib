@@ -22,14 +22,13 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <userDefaultsController representsSharedInstance="YES" id="Bui-lf-GNg"/>
         <window title="Noisy" allowsToolTipsWhenApplicationIsInactive="NO" releasedWhenClosed="NO" frameAutosaveName="Main" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="hU5-rr-pEx">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="213" y="226" width="300" height="100"/>
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+            <rect key="contentRect" x="213" y="226" width="300" height="128"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1055"/>
-            <value key="minSize" type="size" width="250" height="100"/>
-            <value key="maxSize" type="size" width="1024" height="100"/>
+            <value key="minSize" type="size" width="250" height="128"/>
+            <value key="maxSize" type="size" width="1024" height="128"/>
             <view key="contentView" id="fmc-ih-tN3">
-                <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="300" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUl-IH-jdJ">

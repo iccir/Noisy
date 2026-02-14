@@ -279,6 +279,8 @@ typedef NS_ENUM(NSInteger, PlayerState) {
                                                  name: notificationName
                                                object: nil];
 
+    [self _handleNowPlayingNotification:nil];
+
     _didSetupNowPlaying = YES;
 }
 

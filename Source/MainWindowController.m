@@ -223,8 +223,14 @@
     
     [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
         [context setDuration:0.5];
-        [[_autoMuteIconView animator] setAlphaValue:(isPlaying && isMuted) ? 1.0 : 0.0];
+        [[_autoMuteIconView animator] setAlphaValue:isMuted ? 1.0 : 0.0];
     }];
+    
+    if (isMuted) {
+        [_autoMuteIconView setToolTip:NSLocalizedString(@"AUTO_MUTE_IS_ACTIVE", @"Text when Auto Mute is active")];
+    } else {
+        [_autoMuteIconView setToolTip:nil];
+    }
 }
 
 
