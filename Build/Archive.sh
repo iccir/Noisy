@@ -1,7 +1,12 @@
 #!/bin/sh
 
-BUILD_PREFIX="Noisy"
-ZIP_TO="$HOME/Desktop"
+BUILD_PREFIX="${1:-$PRODUCT_NAME}"
+ZIP_TO="${2:-$HOME/Desktop}"
+
+if [ -z "$BUILD_PREFIX" ]; then
+    echo "Usage: Archive.sh <build-prefix>" >&2
+    exit 1
+fi
 
 # ----------------------------------
 # Fill variables from Private/Archive.plist
@@ -60,10 +65,6 @@ get_plist_build ()
     printf $(defaults read "$1" CFBundleVersion | sed 's/\s//g' )
 }
 
-get_private_setting ()
-{
-    defaults read "$1"
-}
 
 # Prevent error log spam
 unset XCODE_DEVELOPER_DIR_PATH
@@ -107,7 +108,7 @@ pushd "$APP_FILE"/.. > /dev/null
 
 # Zip up $APP_FILE to $ZIP_FILE and upload to notarization server
 
-zip --symlinks -r "$ZIP_FILE" $(basename "$APP_FILE")
+zip --symlinks -r "$ZIP_FILE" "$(basename "$APP_FILE")"
 
 set_status "Sending to Apple notary service. This may take several minutes."
 
@@ -135,7 +136,7 @@ if [[ "${SUBMIT_STATUS}" =~ "Accepted" ]] ; then
     xcrun stapler staple "$APP_FILE"
 
     FINAL_ZIP_FILE="$ZIP_TO/$ZIP_FILE"
-    zip --symlinks -r "$FINAL_ZIP_FILE" $(basename "$APP_FILE")
+    zip --symlinks -r "$FINAL_ZIP_FILE" "$(basename "$APP_FILE")"
     scp "$FINAL_ZIP_FILE" "$UPLOAD_TO"
 
     if [ -n "$PUBLIC_URL" ]; then
