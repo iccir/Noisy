@@ -7,9 +7,7 @@ See [Noisy Advanced Usage](https://github.com/iccir/Noisy/blob/main/Docs/Advance
 
 ## Philosophy
 
-Audio programming is hard. macOS audio programming is harder (usually due to sparse documentation). This repository is publicly-viewable in the hopes that its source code can help others.
-
-This repository is closed to outside contributions. **Please do not submit pull requests**.
+Audio programming is hard. macOS audio programming is harder (usually due to sparse documentation). This repository is publicly-viewable in the hopes that its source code can help others. This project is otherwise closed to outside contributions and pull requests are disabled.
 
 If you are struggling with an audio or DSP concept, you can contact me via my [contact form](https://www.ricciadams.com) and I can try to point you in the right direction.
 
