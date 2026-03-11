@@ -19,6 +19,7 @@ get_private_setting ()
 }
 
 TEAM_ID=$(          get_private_setting "team-id"          )
+CERTIFICATE=$(      get_private_setting "certificate"      )
 KEYCHAIN_PROFILE=$( get_private_setting "keychain-profile" )
 UPLOAD_TO=$(        get_private_setting "upload-to"        )
 PUBLIC_URL=$(       get_private_setting "public-url"       )
@@ -74,8 +75,11 @@ printenv >> "${TMP_DIR}/env.txt"
 
 # 1. Export archive to tmp location and set APP_FILE, push to parent directory
 mkdir -p "${TMP_DIR}"
+defaults write "${TMP_DIR}/options.plist" signingStyle manual
 defaults write "${TMP_DIR}/options.plist" method developer-id
+defaults write "${TMP_DIR}/options.plist" provisioningProfiles -dict
 defaults write "${TMP_DIR}/options.plist" teamID "$TEAM_ID"
+defaults write "${TMP_DIR}/options.plist" signingCertificate "$CERTIFICATE"
 
 set_status "Exporting archive from Xcode."
 
