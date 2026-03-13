@@ -33,6 +33,6 @@ In 2025, unable to find a lightweight and efficient noise generator, I decided t
 
 I only care about proper attribution in source code. While attribution in binary form is welcomed, it is not necessary.
 
-Hence, unless otherwise noted, all files in this project are licensed under both the [MIT License](https://github.com/iccir/Noisy/blob/main/LICENSE) OR the [1-clause BSD License](https://opensource.org/license/bsd-1-clause). You may choose either license.
+Hence, unless otherwise noted, all files in this project are licensed under both the [MIT License](https://github.com/iccir/Noisy/blob/main/LICENSE) **or** the [1-clause BSD License](https://opensource.org/license/bsd-1-clause). You may choose either license.
 
 `SPDX-License-Identifier: MIT OR BSD-1-Clause`
