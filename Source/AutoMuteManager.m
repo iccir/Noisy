@@ -106,7 +106,7 @@ typedef NS_ENUM(NSInteger, PlayerState) {
         _entries = [self _sortedEntriesWithEntries:entries];
 
         [self _handleSettingsDidChange:nil];
-        [self _setNeedsUpdate];
+        [self _update];
     }
 
     return self;
