@@ -215,7 +215,13 @@ typedef NS_ENUM(NSInteger, PlayerState) {
 
 - (void) _setupPlayerState
 {
-    __auto_type runScript = ^(NSString *scriptName) {
+    __auto_type checkIsPlaying = ^(NSString *bundleID, NSString *scriptName) {
+        NSURL *spotifyURL = [[NSWorkspace sharedWorkspace] URLForApplicationWithBundleIdentifier:bundleID];
+        if (!spotifyURL) return NO;
+        
+        NSArray *runningApps = [NSRunningApplication runningApplicationsWithBundleIdentifier:bundleID];
+        if ([runningApps count] == 0) return NO;
+    
         NSURL *scriptURL = [[NSBundle mainBundle] URLForResource:scriptName withExtension:@"scpt"];
         if (!scriptURL) return NO;
         
@@ -231,19 +237,19 @@ typedef NS_ENUM(NSInteger, PlayerState) {
     };
 
     if (_appleMusicPlayerState == PlayerStateUnknown) {
-        if (runScript(@"IsAppleMusicPlaying")) {
+        if (checkIsPlaying(@"com.apple.Music", @"IsAppleMusicPlaying")) {
             _appleMusicPlayerState = PlayerStatePlaying;
         }
     }
 
     if (_spotifyPlayerState == PlayerStateUnknown) {
-        if (runScript(@"IsSpotifyPlaying")) {
+        if (checkIsPlaying(@"com.spotify.client", @"IsSpotifyPlaying")) {
             _spotifyPlayerState = PlayerStatePlaying;
         }
     }
 
     if (_swinsianPlayerState == PlayerStateUnknown) {
-        if (runScript(@"IsSwinsianPlaying")) {
+        if (checkIsPlaying(@"com.swinsian.Swinsian", @"IsSwinsianPlaying")) {
             _swinsianPlayerState = PlayerStatePlaying;
         }
     }
